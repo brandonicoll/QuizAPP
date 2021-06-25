@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizAPP">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".QuestionsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme"
-
             android:windowSoftInputMode="adjustResize"> <!-- PUT THIS IN EVERY APP -->
 
             <intent-filter>
@@ -21,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
