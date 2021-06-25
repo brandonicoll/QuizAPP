@@ -16,10 +16,9 @@
         android:layout_marginBottom="30dp"
         android:gravity="center"
         android:text="@string/quiz_app"
-        android:textColor="#000000"
+        android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-
         app:layout_constraintVertical_bias="0.316" />
 
     <androidx.cardview.widget.CardView
@@ -66,10 +65,22 @@
                     android:hint="Name"
                     android:gravity="center"
                     android:textColor="#363A43"
-                    android:textColorHint="#7A8089"
-                    android:elevation="3dp"></EditText>
+                    android:textColorHint="#7A8089"></EditText>
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#2F3B82"
+                android:text="Start"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:backgroundTint="#2F3B82">
+
+            </Button>
 
         </LinearLayout>
 
