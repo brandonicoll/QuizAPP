@@ -12,7 +12,9 @@
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustResize">
+
+            android:windowSoftInputMode="adjustResize"> <!-- PUT THIS IN EVERY APP -->
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

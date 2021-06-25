@@ -43,7 +43,33 @@
                 android:gravity="center"
                 android:text="@string/welcome"
                 android:textColor="#363A43"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/please_enter_your_name"
+                android:textColor="#7A8089"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:gravity="center"
+                    android:textColor="#363A43"
+                    android:textColorHint="#7A8089"
+                    android:elevation="3dp"></EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
