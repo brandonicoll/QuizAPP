@@ -34,7 +34,6 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener { //need Vie
     }
 
     private fun setQuestion() {
-        mCurrentPosition = 1
         val question = mQuestionsList!![mCurrentPosition - 1]
 
         defualtOptionsView()
