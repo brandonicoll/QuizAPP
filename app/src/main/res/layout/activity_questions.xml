@@ -27,6 +27,7 @@
 
 
         <ImageView
+            android:id="@+id/iv_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -46,7 +47,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:max="10"
+                android:max="20"
                 android:minHeight="50dp"
                 android:progress="0"
                 android:indeterminate="false"/>
@@ -69,11 +70,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/default_option_border_bg"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:padding="15dp"
             android:textColor="#7A8089"
             android:textSize="18sp"
-            android:text="Apple"
+            tools:text="Apple"
             />
 
         <TextView
@@ -82,11 +83,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/default_option_border_bg"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:padding="15dp"
             android:textColor="#7A8089"
             android:textSize="18sp"
-            android:text="Apple"
+            tools:text="Google"
             />
 
         <TextView
@@ -95,11 +96,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/default_option_border_bg"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:padding="15dp"
             android:textColor="#7A8089"
             android:textSize="18sp"
-            android:text="Apple"
+            tools:text="Android"
             />
 
         <TextView
@@ -108,11 +109,22 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/default_option_border_bg"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:padding="15dp"
             android:textColor="#7A8089"
             android:textSize="18sp"
-            android:text="Apple"
+            tools:text="Nokia"
+            />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
             />
 
 
