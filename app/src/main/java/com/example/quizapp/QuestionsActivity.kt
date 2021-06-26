@@ -38,6 +38,12 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener { //need Vie
         val question = mQuestionsList!![mCurrentPosition - 1]
 
         defualtOptionsView()
+        if (mCurrentPosition == mQuestionsList!!.size) {
+            btn_submit.text = "FINISH"
+        }
+        else {
+            btn_submit.text = "GO TO NEXT QUESTION"
+        }
 
         progressBar.progress = mCurrentPosition
         tv_progress.text = "$mCurrentPosition" + "/" + progressBar.max
@@ -108,6 +114,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener { //need Vie
                     else {
                         btn_submit.text = "GO TO NEXT QUESTION"
                     }
+                    mSelectedOptionPosition = 0
                 }
             }
         }
