@@ -1,5 +1,6 @@
 package com.example.quizapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_result.*
@@ -15,5 +16,9 @@ class ResultActivity : AppCompatActivity() {
         val correct = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
         val questions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         tv_score.text = "Your Score is $correct out of $questions"
+
+        btn_finish.setOnClickListener{
+            startActivity(Intent(this, MainActivity::class.java))
+        }
     }
 }
