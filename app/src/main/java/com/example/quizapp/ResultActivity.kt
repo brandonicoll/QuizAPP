@@ -12,8 +12,8 @@ class ResultActivity : AppCompatActivity() {
         val username = intent.getStringExtra(Constants.USER_NAME)
         tv_name.text = username
 
-        val correct = intent.getStringExtra(Constants.CORRECT_ANSWERS)
-        val questions = intent.getStringExtra(Constants.TOTAL_QUESTIONS)
+        val correct = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
+        val questions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         tv_score.text = "Your Score is $correct out of $questions"
     }
 }
