@@ -104,6 +104,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener { //need Vie
                             intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
                             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                             startActivity(intent)
+                            finish()
                         }
 
                     }
