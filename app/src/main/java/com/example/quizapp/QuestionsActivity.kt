@@ -1,5 +1,6 @@
 package com.example.quizapp
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -17,10 +18,13 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener { //need Vie
     private var mSelectedOptionPosition = 0
 
     private var mCorrectAnswers:Int = 0
+    private var mUserName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
+
+        mUserName = intent.getStringExtra(Constants.USER_NAME)
 
         mQuestionsList = Constants.getQuestions()
 
@@ -95,7 +99,11 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener { //need Vie
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
                         } else -> {
-                            Toast.makeText(this, "You have completed the quiz!", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this, ResultActivity::class.java)
+                            intent.putExtra(Constants.USER_NAME, mUserName)
+                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+                            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                            startActivity(intent)
                         }
 
                     }
